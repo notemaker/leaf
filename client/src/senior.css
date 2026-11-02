@@ -1,0 +1,670 @@
+/* Long-form reading and touch layout for the large-type workbench. */
+:root {
+  font-size: 100%;
+  --muted: #4d6557;
+}
+body {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.app-shell :where(button, input, select, textarea) {
+  touch-action: manipulation;
+}
+.app-shell :where(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid #356e45;
+  outline-offset: 3px;
+}
+.app-shell svg {
+  flex-shrink: 0;
+}
+.app-shell .sidebar {
+  width: 290px;
+  flex-basis: 290px;
+}
+.app-shell .brand-block strong {
+  font-size: 1.5rem;
+}
+.app-shell .brand-block span {
+  letter-spacing: 0.08em;
+}
+.app-shell .nav-item {
+  min-height: 56px;
+  font-size: 1.25rem;
+}
+.app-shell .nav-label,
+.app-shell .sidebar-footer {
+  color: #c3d8c4;
+}
+.app-shell .season-note small {
+  color: #c3d8c4;
+}
+.app-shell .topbar {
+  min-height: 84px;
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  gap: 16px;
+}
+.app-shell .topbar-actions {
+  flex-wrap: wrap;
+}
+.app-shell .icon-button {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+}
+.app-shell .button {
+  min-height: 52px;
+  padding: 12px 18px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  white-space: normal;
+}
+.app-shell .button svg,
+.app-shell .icon-button svg {
+  width: 22px;
+  height: 22px;
+}
+.app-shell .page-header {
+  align-items: start;
+  flex-wrap: wrap;
+}
+.app-shell .page-header > div:first-child {
+  flex: 1 1 380px;
+}
+.app-shell .page-actions {
+  justify-content: start;
+}
+.app-shell .page-header h1 {
+  font-size: clamp(2.125rem, 3vw, 2.5rem);
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.app-shell .panel-head h2 {
+  font-size: 1.625rem;
+}
+.app-shell .panel-head {
+  flex-wrap: wrap;
+}
+.app-shell .eyebrow {
+  color: #51694f;
+  letter-spacing: 0.06em;
+}
+.app-shell .metrics-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.app-shell .metric-card {
+  padding: 22px;
+}
+.app-shell .metric-card > div:last-child,
+.app-shell .quick-action > span:nth-child(2) {
+  min-width: 0;
+}
+.app-shell .metric-card strong {
+  font-size: clamp(1.75rem, 2.5vw, 2rem);
+  line-height: 1.45;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+.app-shell .metric-card span {
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
+  color: #526957;
+}
+.app-shell .demo-ribbon {
+  align-items: start;
+  padding: 16px;
+}
+.app-shell .demo-ribbon p {
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+.app-shell .dashboard-grid,
+.app-shell .settings-layout,
+.app-shell .report-grid {
+  grid-template-columns: 1fr;
+}
+.app-shell .unit-row {
+  grid-template-columns: minmax(135px, 0.35fr) 1fr;
+}
+.app-shell .unit-label {
+  gap: 12px;
+}
+.app-shell .chart-footer {
+  flex-wrap: wrap;
+}
+.app-shell .text-button,
+.app-shell .filter-clear,
+.app-shell .more-button,
+.app-shell .partner-disable,
+.app-shell .row-actions button {
+  min-height: 52px;
+  padding: 8px 12px;
+}
+.app-shell .quick-action {
+  min-height: 88px;
+  padding: 18px 0;
+}
+.app-shell .activity-row {
+  min-height: 65px;
+  grid-template-columns:
+    110px 145px minmax(190px, 1.4fr) minmax(130px, 1fr)
+    minmax(150px, 1fr);
+}
+.app-shell .activity-table {
+  overflow-x: auto;
+}
+.app-shell .activity-head {
+  color: #526957;
+}
+.app-shell .activity-row > span {
+  overflow-wrap: anywhere;
+}
+.app-shell .activity-head,
+.app-shell .report-head {
+  line-height: 1.5;
+}
+.app-shell .status-badge {
+  padding: 6px 10px;
+}
+.app-shell .panel-note,
+.app-shell .chart-footer,
+.app-shell .result-count,
+.app-shell .unit-text,
+.app-shell .sub-cell,
+.app-shell .partner-default small,
+.app-shell .report-head,
+.app-shell .report-footnote,
+.app-shell .rule-number,
+.app-shell .input-prefix span,
+.app-shell .shipment-total small {
+  color: #4d6557;
+}
+.app-shell .search-box {
+  height: auto;
+  min-height: 56px;
+  max-width: 600px;
+}
+.app-shell .search-box input {
+  font-size: 1.375rem;
+  width: 100%;
+  min-height: 52px;
+}
+.app-shell input::placeholder,
+.app-shell textarea::placeholder {
+  color: #617065;
+  opacity: 1;
+}
+.app-shell .filter-control {
+  height: auto;
+  min-height: 52px;
+  max-width: 240px;
+  min-width: 140px;
+  padding: 10px 12px;
+  font-size: 1.375rem;
+}
+.app-shell .date-control {
+  min-width: 190px;
+}
+.app-shell .filter-controls,
+.app-shell .report-filters {
+  gap: 12px;
+}
+.app-shell th {
+  height: 62px;
+  color: #4d6557;
+}
+.app-shell td {
+  font-size: 1.25rem;
+}
+.app-shell .note-cell {
+  white-space: normal;
+  text-overflow: clip;
+}
+.app-shell .partner-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.app-shell .partner-top {
+  flex-wrap: wrap;
+}
+.app-shell .partner-info span,
+.app-shell .partner-note {
+  overflow-wrap: anywhere;
+}
+.app-shell .partner-default {
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.app-shell .segmented-control button {
+  min-height: 52px;
+  font-size: 1.25rem;
+}
+.app-shell .date-anchor {
+  flex-wrap: wrap;
+}
+.app-shell .date-anchor input {
+  min-height: 52px;
+  height: auto;
+  font-size: 1.375rem;
+  min-width: 180px;
+}
+.app-shell .report-row {
+  min-height: 62px;
+}
+.app-shell .report-title-row h2 {
+  font-size: 1.875rem;
+}
+.app-shell .quantity-pills {
+  gap: 8px;
+}
+.app-shell .quantity-pill {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.app-shell .field {
+  min-width: 0;
+  gap: 10px;
+}
+.app-shell .field label,
+.app-shell .settings-field > span {
+  font-size: 1.25rem;
+}
+.app-shell .field input,
+.app-shell .field select,
+.app-shell .field textarea {
+  font-size: 1.375rem;
+  min-height: 56px;
+  padding: 12px;
+  min-width: 0;
+  line-height: 1.5;
+}
+.app-shell .input-prefix input {
+  width: 0;
+  flex: 1;
+}
+.app-shell .form-grid {
+  gap: 22px 18px;
+}
+.app-shell .modal-head h2 {
+  font-size: 1.875rem;
+}
+.app-shell .modal-panel {
+  width: min(780px, 100%);
+}
+.app-shell .shipment-total {
+  grid-template-columns: 1fr;
+}
+.app-shell .shipment-total strong {
+  font-size: 2rem;
+  overflow-wrap: anywhere;
+}
+.app-shell .form-hint,
+.app-shell .security-note,
+.app-shell .report-footnote {
+  align-items: start;
+}
+.app-shell .security-note p {
+  color: #76531e;
+}
+.app-shell .setup-guide {
+  grid-template-columns: 1fr;
+}
+.app-shell .setup-step {
+  grid-template-columns: 36px 1fr;
+}
+.app-shell .setup-step > span {
+  width: 34px;
+  height: 34px;
+}
+.app-shell .alert-banner {
+  top: 96px;
+  max-width: min(580px, calc(100vw - 32px));
+  align-items: start;
+}
+.app-shell .alert-banner button {
+  min-width: 48px;
+  min-height: 52px;
+}
+.app-shell .empty-state,
+.app-shell .empty-inline {
+  color: #4d6557;
+}
+.mobile-function-nav {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .app-shell .sidebar {
+    width: 265px;
+    flex-basis: 265px;
+  }
+  .app-shell .metric-card {
+    padding: 18px;
+  }
+}
+@media (max-width: 760px) {
+  .app-shell {
+    padding-bottom: 0;
+  }
+  .app-shell .topbar {
+    padding: 12px 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .app-shell .mobile-brand {
+    font-size: 1.25rem;
+    gap: 8px;
+  }
+  .app-shell .mobile-brand-image {
+    display: block;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    object-fit: contain;
+  }
+  .app-shell .topbar-actions {
+    gap: 8px;
+    justify-content: end;
+  }
+  .app-shell .connection-pill {
+    max-width: none;
+    white-space: normal;
+    overflow: visible;
+    font-size: 1rem;
+    padding: 5px 8px;
+  }
+  .app-shell .mobile-menu {
+    width: auto;
+    padding: 8px 12px;
+    display: inline-flex;
+    gap: 6px;
+    font-size: 1.125rem;
+    min-height: 52px;
+  }
+  .app-shell .mobile-menu svg {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-function-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 16px;
+    background: #edf5e9;
+    border-bottom: 1px solid #c9d7c2;
+  }
+  .mobile-function-nav button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #c2d4bb;
+    border-radius: 10px;
+    min-height: 54px;
+    background: #fff;
+    color: #1f4d3a;
+    font-size: 1.25rem;
+  }
+  .mobile-function-nav button.active {
+    background: #1f4d3a;
+    color: #fff;
+  }
+  .app-shell .page-header > div:first-child {
+    flex: auto;
+  }
+  .app-shell .page-content {
+    padding: 26px 16px 40px;
+  }
+  .app-shell .page-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .app-shell .page-actions .button {
+    width: 100%;
+    flex: auto;
+  }
+  .app-shell .metrics-grid,
+  .app-shell .partner-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .metric-card {
+    min-height: 0;
+    padding: 20px;
+  }
+  .app-shell .metric-card strong {
+    font-size: 1.75rem;
+  }
+  .app-shell .unit-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .app-shell .unit-label {
+    font-size: 1.25rem;
+  }
+  .app-shell .unit-bars {
+    gap: 24px;
+  }
+  .app-shell .demo-ribbon button {
+    display: none;
+  }
+  .app-shell .filter-controls,
+  .app-shell .report-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .app-shell .filter-control {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    flex: auto;
+  }
+  .app-shell .date-anchor input {
+    min-width: 0;
+    max-width: none;
+    flex: 1 1 100%;
+  }
+  .app-shell .table-scroll {
+    overflow: visible;
+  }
+  .app-shell .data-panel {
+    padding: 12px;
+    background: transparent;
+    border: 0;
+    overflow: visible;
+  }
+  .app-shell .data-panel table,
+  .app-shell .data-panel tbody {
+    display: block;
+    min-width: 0;
+    width: 100%;
+  }
+  .app-shell .data-panel thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .app-shell .data-panel tbody tr {
+    display: block;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #c9d7c2;
+    border-radius: 14px;
+    background: #fff;
+  }
+  .app-shell .data-panel td {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e9de;
+    white-space: normal;
+    text-align: left;
+    max-width: none;
+    overflow-wrap: anywhere;
+  }
+  .app-shell .data-panel td::before {
+    content: attr(data-label);
+    display: block;
+    color: #4d6557;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  .app-shell .data-panel .row-actions {
+    border-bottom: 0;
+  }
+  .app-shell .row-actions button {
+    margin: 0 10px 0 0;
+    border: 1px solid #c2d4bb;
+    border-radius: 8px;
+    font-size: 1.25rem;
+  }
+  .app-shell .activity-table {
+    overflow: visible;
+  }
+  .app-shell .activity-head {
+    display: none;
+  }
+  .app-shell .activity-row:not(.activity-head) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 18px 0;
+  }
+  .app-shell .activity-row:not(.activity-head) > span {
+    display: block;
+    font-size: 1.25rem;
+  }
+  .app-shell .activity-row:not(.activity-head) > span::before {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4d6557;
+  }
+  .app-shell .activity-row > span:nth-child(2)::before {
+    content: "日期";
+  }
+  .app-shell .activity-row > span:nth-child(3)::before {
+    content: "內容";
+  }
+  .app-shell .activity-row > span:nth-child(4)::before {
+    content: "數量";
+  }
+  .app-shell .activity-row > span:nth-child(5)::before {
+    content: "金額";
+  }
+  .app-shell .report-row,
+  .app-shell .report-grid > section:nth-child(2) .report-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 0;
+    gap: 10px;
+  }
+  .app-shell .report-head {
+    display: none;
+  }
+  .app-shell .report-row > span {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+  .app-shell .report-row > span::before {
+    display: inline-block;
+    color: #4d6557;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  .app-shell
+    .report-grid
+    > section:first-child
+    .report-row
+    > span:nth-child(2)::before {
+    content: "出產";
+  }
+  .app-shell
+    .report-grid
+    > section:first-child
+    .report-row
+    > span:nth-child(3)::before {
+    content: "出貨";
+  }
+  .app-shell
+    .report-grid
+    > section:first-child
+    .report-row
+    > span:nth-child(4)::before {
+    content: "出貨筆數";
+  }
+  .app-shell
+    .report-grid
+    > section:nth-child(2)
+    .report-row
+    > span:nth-child(2)::before {
+    content: "出貨量";
+  }
+  .app-shell
+    .report-grid
+    > section:nth-child(2)
+    .report-row
+    > span:nth-child(3)::before {
+    content: "金額";
+  }
+  .app-shell .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .full {
+    grid-column: 1 / -1;
+  }
+  .app-shell .modal-panel {
+    max-height: 94dvh;
+    width: 100%;
+    padding: 22px 16px;
+  }
+  .app-shell .form-actions {
+    position: static;
+    flex-wrap: wrap;
+  }
+  .app-shell .form-actions .button {
+    flex: 1 1 120px;
+  }
+  .app-shell .alert-banner {
+    top: 108px;
+  }
+}
+@media (max-width: 430px) {
+  .app-shell .topbar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .app-shell .mobile-brand {
+    flex: 1 1 100%;
+  }
+  .app-shell .topbar-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .app-shell .alert-banner {
+    top: 158px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-shell *,
+  .app-shell *::before,
+  .app-shell *::after {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Recorded quantities and shipment totals remain prominent in the large-type tables. */
+.app-shell .data-panel td strong,
+.app-shell .data-panel td.money-cell {
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
