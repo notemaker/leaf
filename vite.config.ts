@@ -171,6 +171,9 @@ function vitePluginPublicPlatformConfig(): Plugin {
 const plugins = [vitePluginPublicPlatformConfig(), react(), tailwindcss(), jsxLocPlugin(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
+  // GitHub Pages is served at https://notemaker.github.io/leaf/.
+  // Keep local/Manus preview URLs at the root path.
+  base: process.env.GITHUB_ACTIONS ? "/leaf/" : "/",
   plugins,
   resolve: {
     alias: {

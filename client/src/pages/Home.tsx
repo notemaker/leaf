@@ -730,7 +730,7 @@ export default function Home() {
           <div className="mobile-brand">
             <img
               className="mobile-brand-image"
-              src="/manus-storage/laoye-leaves_6edf0ffb.png"
+              src={`${import.meta.env.BASE_URL}images/laoye-leaves.png`}
               alt=""
               width={40}
               height={40}
